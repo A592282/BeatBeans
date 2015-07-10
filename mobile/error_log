@@ -1,0 +1,5 @@
+[29-Sep-2012 18:33:59] PHP Warning:  require_once(/home/beatbbeq/public_html/mobile/LoginFiles/membersite_config.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/beatbbeq/public_html/mobile/login.php on line 6
+[29-Sep-2012 18:33:59] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/home/beatbbeq/public_html/mobile/LoginFiles/membersite_config.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/beatbbeq/public_html/mobile/login.php on line 6
+[29-Sep-2012 19:42:13] PHP Fatal error:  Call to undefined function menuifnologin() in /home/beatbbeq/public_html/mobile/login.php on line 151
+[29-Sep-2012 19:54:44] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /home/beatbbeq/public_html/mobile/index.php on line 82
+[29-Sep-2012 19:54:52] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /home/beatbbeq/public_html/mobile/index.php on line 82

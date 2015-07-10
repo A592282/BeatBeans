@@ -1,0 +1,385 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0033)http://localhost/hm/affiliate.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head runat="server"><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Beat Beans :-) Wrong Kitchen</title>
+        
+        <link rel="stylesheet" type="text/css" href="./Beat Beans  -) Wrong Kitchen_files/reset-min.css">
+        <link rel="stylesheet" href="./Beat Beans  -) Wrong Kitchen_files/style.css" type="text/css" media="all" charset="utf-8">
+        <link rel="stylesheet" href="./Beat Beans  -) Wrong Kitchen_files/MenuMatic.css" type="text/css" media="screen" charset="utf-8">
+        <script type="text/javascript" src="./Beat Beans  -) Wrong Kitchen_files/location.js"></script>
+        <script type="text/javascript" src="./Beat Beans  -) Wrong Kitchen_files/jquery-latest.js"></script>
+        <link rel="STYLESHEET" type="text/css" href="./Beat Beans  -) Wrong Kitchen_files/loginregisterstyle.css">
+
+        <!--[if lt IE 7]>
+			<link rel="stylesheet" href="css/MenuMatic-ie6.css" type="text/css" media="screen" charset="utf-8" />
+		<![endif]-->
+        <link href="http://localhost/hm/css/sunny/jquery-ui-1.9.1.custom.css" rel="stylesheet">
+
+        <script src="./Beat Beans  -) Wrong Kitchen_files/jquery-ui-1.9.1.custom.js"></script>
+
+        <script>
+            var num=1;
+            window.setInterval(function(){changetext();}, 6000);
+            function changetext()
+            {
+                //alert("Out"+num)
+                jQuery('#changetext').fadeOut("slow");
+                if(num==1)
+                {
+                    document.getElementById("changetext").innerHTML="<p><h6>Edu Empower</h6><img src=\"images/book.jpg\" />We contribute 2% of our revenue to educate poor kids in Rural India.</p>";
+                    num=num+1;
+                    //      alert("In"+num)
+                }
+                else if(num==2)
+                {
+                    document.getElementById("changetext").innerHTML="<p><h6>Still Using Phone?</h6><img src=\"images/phone.jpg\" />Order Online! Its Simple > Fast > Reliable.</p>";
+                    num=num+1;
+                }
+                else if(num==3)
+                {
+                    document.getElementById("changetext").innerHTML="<p><h6>BeatBeans.Com</h6>BeatBeans.com is a premium online food ordering platform.It's a one stop site that not just allows you to search and locate restaurants of your choice but also takes orders on your behalf.</p>";
+                    num=1;
+                }
+                jQuery('#changetext').fadeIn("fast");
+            }
+            jQuery(function() {
+                jQuery( "#button" ).button();
+                jQuery( "#radioset" ).buttonset();
+                jQuery( "#dialog" ).dialog({
+                    autoOpen: false,
+                    width: 400,
+                    buttons: [
+                        {
+                            text: "Ok",
+                            click: function() {
+                                jQuery( this ).dialog( "close" );
+                            }
+                        },
+
+                    ]
+                });
+
+
+                // Link to open the dialog
+                jQuery( "#dialog-link" ).click(function( event ) {
+                    document.getElementById("dialog").innerHTML="Loading";
+                    jQuery("#dialog").load("PresentationLayer/PL_ShoppingCart.php",function() {
+                    });
+
+                    jQuery( "#dialog" ).dialog( "open" );
+                    event.preventDefault();
+                });
+
+                // Hover states on the static widgets
+                jQuery( "#dialog-link, #icons li" ).hover(
+                function() {
+                    jQuery( this ).addClass( "ui-state-hover" );
+                },
+                function() {
+                    jQuery( this ).removeClass( "ui-state-hover" );
+                }
+            );
+            });
+        </script>
+        <style>
+
+            .demoHeaders {
+                margin-top: 2em;
+            }
+            #dialog-link span.ui-icon {
+                margin: 0 5px 0 0;
+                position: absolute;
+                left: .2em;
+                top: 50%;
+                margin-top: -8px;
+            }
+            #icons {
+                margin: 0;
+                padding: 0;
+            }
+            #icons li {
+                margin: 2px;
+                position: relative;
+                padding: 4px 0;
+                cursor: pointer;
+                float: left;
+                list-style: none;
+            }
+            #icons span.ui-icon {
+                float: left;
+                margin: 0 4px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <a id="logo" href="http://localhost/hm/index.php"></a>
+        <div id="container">
+            <!-- BEGIN Menu -->
+            <ul id="nav">
+
+                <li><a href="http://localhost/hm/affiliate.php#" class="mainParentBtn mainMenuParentBtn">Your Plate</a>
+    
+</li>
+<li><a href="http://localhost/hm/affiliate.php#" class="mainMenuParentBtn mainParentBtn">My Account</a>
+    
+
+</li>
+    <link href="http://localhost/hm/css/sunny/jquery-ui-1.9.1.custom.css" rel="stylesheet">
+
+<script src="./Beat Beans  -) Wrong Kitchen_files/jquery-ui-1.9.1.custom.js"></script>
+
+<script>
+    jQuery(function() {
+        jQuery( "#button" ).button();
+        jQuery( "#radioset" ).buttonset();
+        jQuery( "#dialog" ).dialog({
+            autoOpen: false,
+            width: 400,
+            buttons: [
+                {
+                    text: "Ok",
+                    click: function() {
+                        jQuery( this ).dialog( "close" );
+                    }
+                },
+
+            ]
+        });
+        jQuery( "#coupon" ).dialog({
+            autoOpen: false,
+            width: 400,
+            buttons: [
+                {
+                    text: "Ok",
+                    click: function() {
+                        jQuery( this ).dialog( "close" );
+                    }
+                },
+
+            ]
+        });
+
+
+        // Link to open the dialog
+        jQuery( "#dialog-link" ).click(function( event ) {
+            document.getElementById("dialog").innerHTML="Loading";
+            jQuery("#dialog").load("PresentationLayer/PL_ShoppingCart.php",function() {
+            });
+
+            jQuery( "#dialog" ).dialog( "open" );
+            event.preventDefault();
+        });
+        jQuery( "#couponbutton" ).click(function( event ) {
+            document.getElementById("coupon").innerHTML="Loading";
+            jQuery("#coupon").load("PresentationLayer/PL_Coupon.php",function() {
+            });
+
+            jQuery( "#coupon" ).dialog( "open" );
+            event.preventDefault();
+        });
+
+        // Hover states on the static widgets
+        jQuery( "#dialog-link, #icons li" ).hover(
+        function() {
+            jQuery( this ).addClass( "ui-state-hover" );
+        },
+        function() {
+            jQuery( this ).removeClass( "ui-state-hover" );
+        }
+    );
+        jQuery( "#couponbutton, #icons li" ).hover(
+        function() {
+            jQuery( this ).addClass( "ui-state-hover" );
+        },
+        function() {
+            jQuery( this ).removeClass( "ui-state-hover" );
+        }
+    );
+    })
+    function addCoupon()
+    {
+        CouponCode=document.getElementById("CouponCodeText").value;
+        if(CouponCode=="")
+        {
+            alert("Cannot add blank coupon");
+        }
+        else
+        {
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("coupon").innerHTML=xmlhttp.responseText;
+                }
+                else
+                {
+                    document.getElementById("coupon").innerHTML="Processing...";
+                }
+            }
+
+            xmlhttp.open("GET","PresentationLayer/PL_Coupon.php?CouponCode="+CouponCode,true);
+            xmlhttp.send();
+        }
+
+    }
+    function deleteCoupon()
+    {
+
+            var xmlhttp;
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("coupon").innerHTML=xmlhttp.responseText;
+                }
+                else
+                {
+                    document.getElementById("coupon").innerHTML="Processing...";
+                }
+            }
+
+            xmlhttp.open("GET","PresentationLayer/PL_Coupon.php?delete=yes",true);
+            xmlhttp.send();
+
+    }
+</script>
+<style>
+
+    .demoHeaders {
+        margin-top: 2em;
+    }
+    #dialog-link span.ui-icon {
+        margin: 0 5px 0 0;
+        position: absolute;
+        left: .2em;
+        top: 50%;
+        margin-top: -8px;
+    }
+    #icons {
+        margin: 0;
+        padding: 0;
+    }
+    #icons li {
+        margin: 2px;
+        position: relative;
+        padding: 4px 0;
+        cursor: pointer;
+        float: left;
+        list-style: none;
+    }
+    #icons span.ui-icon {
+        float: left;
+        margin: 0 4px;
+    }
+</style>
+
+
+
+
+    
+            </ul>
+
+            <!-- END Menu -->
+
+            <div id="content">
+                <br><br><br><br>
+ <img src="./Beat Beans  -) Wrong Kitchen_files/cartoon3.jpg" style="position: fixed; left: 80%; top: 50%;">
+                    <img src="./Beat Beans  -) Wrong Kitchen_files/cartoon.jpg" style="position: fixed; left: 65%; top: 10%; width: 60px; height: 80px">
+                    <h1>We take support from the follwing!!</h1>
+
+                <p>
+                    </p><table width="100%">
+                        <tbody><tr>
+                            <td style="width: 20">
+                                Technosine
+                            </td>
+                            <td>
+                                <img src="./Beat Beans  -) Wrong Kitchen_files/logo.png" alt="logo">
+                            </td>
+                            <td>Web Developers, Web Designers, Application Developers, Animators and Marketing Agents, </td>
+                        </tr>
+                    </tbody></table>
+                <p></p>
+			<hr>
+			<b>BeatBeans.Com</b> in a relationship with food.
+                        <div id="changetext" style="display: block; "><p></p><h6>Edu Empower</h6><img src="./Beat Beans  -) Wrong Kitchen_files/book.jpg">We contribute 2% of our revenue to educate poor kids in Rural India.<p></p></div>
+
+            </div>
+        </div>
+        <div id="cart">
+            <strong>Your Plate:</strong> <br>
+            0 items |
+            0
+            INR
+        </div>
+
+        <div id="footer">
+            Ojasvi Corporation
+            <br>
+            <a href="http://localhost/hm/career.php" style="text-decoration: none">Career | </a>
+            <a href="http://localhost/hm/faq.php" style="text-decoration: none">F.A.Q. | </a>
+            <a href="http://localhost/hm/contact.php" style="text-decoration: none">Contacts | </a>
+            <a href="http://localhost/App" style="text-decoration: none">Android</a>
+        </div>
+
+        <!-- Load the Mootools Framework -->
+        <script src="./Beat Beans  -) Wrong Kitchen_files/jsapi"></script><script>google.load("mootools", "1.2.1");</script><script src="./Beat Beans  -) Wrong Kitchen_files/mootools-yui-compressed.js" type="text/javascript"></script>
+
+        <!-- Load the MenuMatic Class -->
+        <script src="./Beat Beans  -) Wrong Kitchen_files/MenuMatic_0.68.3.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Create a MenuMatic Instance -->
+        <script type="text/javascript">
+            window.addEvent('domready', function() {
+                var myMenu = new MenuMatic();
+            });
+        </script>
+
+    
+
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+    
+        
+        <title></title>
+    
+    
+            
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable ui-dialog-buttons" style="outline-width: 0px; outline-style: initial; outline-color: initial; z-index: 1000; height: auto; width: 400px; position: absolute; display: none; " tabindex="-1" role="dialog" aria-labelledby="ui-id-1"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">Your Orders</span><a href="http://localhost/hm/affiliate.php#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="dialog" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 23px; height: auto; ">
+    Plate Contents
+</div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000; "></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Ok</span></button></div></div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable ui-dialog-buttons" style="display: none; outline-width: 0px; outline-style: initial; outline-color: initial; z-index: 1000; position: absolute; " tabindex="-1" role="dialog" aria-labelledby="ui-id-2"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-2" class="ui-dialog-title">Coupon</span><a href="http://localhost/hm/affiliate.php#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a></div><div id="coupon" class="ui-dialog-content ui-widget-content">
+    </div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1000; "></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1000; "></div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Ok</span></button></div></div></div><div id="subMenusContainer"><div class="smOW" style="height: 104px; width: 112px; top: 146px; left: 632px; visibility: visible; z-index: 1; display: none; "><ul style="width: 112px; left: 0px; margin-top: -104px; visibility: hidden; zoom: 1; opacity: 0; ">
+        <li><a id="dialog-link" href="http://localhost/hm/affiliate.php#" tabindex="-1" class="subMenuBtn">Your Plate:</a>
+        </li>
+        <li><a href="http://localhost/hm/checkout.php" tabindex="-1" class="subMenuBtn">Checkout</a>
+        </li>
+        <li><a href="http://localhost/hm/affiliate.php#" id="couponbutton" tabindex="-1" class="subMenuBtn">Coupon</a>
+        </li>
+    </ul></div><div class="smOW"><ul style="margin-top: 0px; ">
+
+        <li><a href="http://localhost/hm/login.php" tabindex="-1" class="subMenuBtn">Login</a></li>
+        <li><a href="http://localhost/hm/register.php" tabindex="-1" class="subMenuBtn">Register</a></li>
+    </ul></div></div></body></html>

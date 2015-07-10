@@ -1,0 +1,21 @@
+<FilesMatch "^item$">
+SetHandler application/x-httpd-php
+</FilesMatch>
+<FilesMatch "^archive$">
+SetHandler application/x-httpd-php
+</FilesMatch>
+<FilesMatch "^member$">
+SetHandler application/x-httpd-php
+</FilesMatch>
+<FilesMatch "^archives$">
+SetHandler application/x-httpd-php
+</FilesMatch>
+<FilesMatch "^category$">
+SetHandler application/x-httpd-php
+</FilesMatch>
+<FilesMatch "^blog$">
+SetHandler application/x-httpd-php
+</FilesMatch>
+<FilesMatch "^special$">
+SetHandler application/x-httpd-php
+</FilesMatch>

@@ -1,0 +1,7 @@
+/* required styles for carouSlide */
+.slider-wrapper {/*position:relative;*/ overflow:auto; width:400px; /*height:400px;*/}
+.slider-holder {overflow:auto; width:400px; display:block; /*height:400px;*/ padding:0; margin:0;}
+.slider-holder li {padding:10px; margin:0; display:block; width:380px; /*height:380px;*/ float:left; list-style:none; color:#000;}
+.slider-holder ul ul {height:auto; padding-left:18px;}
+.slider-holder li li {padding:0; margin:0; display:list-item; width:auto; height:auto; float:none; list-style:disc;}
+/*.s-active {position:relative; top:0; left:0;}*/
