@@ -23,19 +23,13 @@ if($Cart->FoodCartCount()>0) {
         if($Cart->ConfirmOrder(serialize($Login))) {
             unset($Cart);
             $Cart=new BL_FoodCartClass();
-            //<!--SUCCESS-->
             echo "success";
-            //<!--SUCCESS END-->
-            //<p style="color: red">Please note that your IP Address <b><?php echo $_SERVER['REMOTE_ADDR']  </b>is recorded for tracking purpose.<br/>Our privacy policy mandates that we state this.</p>
             unset($_SESSION['Cart']);
         }
         else {
-            ?>
-<!-----------ERROR START------------->
-<img src="images/error.jpg" alt="success" height="200" width="200" />
-<!------------ERROR END-------------->
-            <?php
-            //echo '<META HTTP-EQUIV="Refresh" Content="0; URL=../checkoutconfirm.php?type=carterror">';
+            //ERROR START
+            echo '<img src="images/error.jpg" alt="success" height="200" width="200" />';
+            //ERROR END
         }
     }
     else {
